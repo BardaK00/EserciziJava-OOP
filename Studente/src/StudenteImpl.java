@@ -1,6 +1,7 @@
 /**
  * Implementazione concreta dell'interfaccia Studente con campi basilari.
  */
+
 public class StudenteImpl implements Studente{
     private int matricola;
     private String nome;
@@ -11,10 +12,12 @@ public class StudenteImpl implements Studente{
     /**
      * Inizializza uno studente con tutti gli attributi forniti.
      */
-    public StudenteImpl(int mat,String name, double media,boolean fuoriC,char corso){
+    public StudenteImpl(int mat,String name, double[] media,boolean fuoriC,char corso){
+
         matricola = mat;
         nome = name;
-        mediaVoti=media;
+        MediaVoti voti =new MediaVoti(media);
+        mediaVoti = voti.getMedia();
         isFuoriCorso = fuoriC;
         inizialeCorso = corso;
 
