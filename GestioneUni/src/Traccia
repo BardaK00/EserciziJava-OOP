@@ -1,0 +1,120 @@
+===========================================
+            ESAME DI PROGRAMMAZIONE JAVA
+           Progetto: Gestione Università
+===========================================
+
+OBIETTIVO
+-------------------------------------------
+Realizzare un programma per la gestione di un sistema universitario che consenta
+di gestire studenti, corsi e voti. Ogni studente può iscriversi a più corsi e
+ricevere un voto per ciascuno di essi. Il sistema può gestire un numero massimo
+di studenti e di corsi, specificato al momento dell’inizializzazione.
+
+STRUTTURA DEL PROGETTO
+-------------------------------------------
+Il progetto deve essere organizzato in più package:
+
+- corsi       : contiene le interfacce e le classi dei corsi universitari.
+- studenti    : contiene la classe Studente e l’interfaccia Valutabile.
+- (default)   : contiene la classe Gestione, che coordina studenti e corsi.
+
+===========================================
+1) PACKAGE "corsi"
+===========================================
+
+INTERFACCIA Corso
+Ogni corso deve avere:
+- un codice identificativo (int)
+- un titolo (String)
+- un docente responsabile (String)
+- un metodo astratto calcolaCrediti()
+
+CLASSI DERIVATE:
+- CorsoTeorico: caratterizzato dal numero di ore di lezione.
+  Il metodo calcolaCrediti() restituisce 1 credito ogni 10 ore di lezione.
+
+- CorsoLaboratorio: caratterizzato dal numero di ore di esercitazione pratica.
+  Il metodo calcolaCrediti() restituisce 1 credito ogni 5 ore di laboratorio.
+
+===========================================
+2) PACKAGE "studenti"
+===========================================
+
+INTERFACCIA Valutabile
+Definisce i metodi comuni agli oggetti che possono ricevere una valutazione:
+- void assegnaVoto(int voto)
+- int getVoto(Corso c)
+
+CLASSE Studente
+Attributi:
+- matricola (int)
+- nome (String)
+- cognome (String)
+- listaCorsi[] (array di Corso, dimensione fissa 15)
+- listaVoti[] (array parallelo di int)
+
+Metodi principali:
+- aggiungiCorso(Corso c): aggiunge il corso alla prima posizione libera.
+- assegnaVoto(int voto): assegna un voto all’ultimo corso aggiunto.
+- getVoto(Corso c): restituisce il voto associato a un corso specifico.
+- calcolaMedia(): calcola la media dei voti assegnati.
+- getter per matricola, nome, cognome, corsi e voti.
+
+La classe Studente implementa l’interfaccia Valutabile.
+
+===========================================
+3) CLASSE "Gestione" (fuori dai package)
+===========================================
+
+Rappresenta il sistema centrale dell’università.
+
+Attributi:
+- Studente[] listaStudenti
+- Corso[] listaCorsi
+
+Costruttore:
+- Gestione(int nStudenti, int nCorsi)
+  Inizializza gli array per studenti e corsi con la dimensione indicata.
+
+Metodi principali:
+- aggiungiStudente(Studente s): aggiunge uno studente al sistema.
+- aggiungiCorso(Corso c): aggiunge un corso al sistema.
+- iscriviStudenteA(Studente s, Corso c): iscrive uno studente a un corso.
+- checkStudente(Studente s) e checkCorso(Corso c): verificano se
+  lo studente o il corso esistono già nel sistema.
+
+===========================================
+4) REQUISITI AGGIUNTIVI / BONUS
+===========================================
+
+- Gestire i casi in cui gli array sono pieni o non viene trovato un elemento.
+- Stampare messaggi a console per confermare operazioni o segnalare errori.
+- (Opzionale) Creare una classe Main per testare il sistema:
+    * Creare un oggetto Gestione.
+    * Aggiungere studenti e corsi.
+    * Iscrivere studenti ai corsi.
+    * Assegnare voti e stampare le medie.
+
+===========================================
+5) OBIETTIVI FORMATIVI
+===========================================
+
+Al termine dell’esercizio lo studente deve dimostrare di saper:
+- Utilizzare correttamente classi, interfacce e array di oggetti.
+- Gestire relazioni uno-a-molti (uno studente → più corsi).
+- Applicare incapsulamento, modularità e polimorfismo.
+- Gestire eccezioni e casi limite in modo coerente.
+
+===========================================
+6) CRITERI DI VALUTAZIONE (Totale 30 punti)
+===========================================
+
+- Struttura dei package e modularità .......... 5 punti
+- Uso corretto di interfacce e metodi astratti  5 punti
+- Implementazione classi e metodi principali .. 10 punti
+- Logica di gestione voti/iscrizioni/media .... 7 punti
+- Robustezza e gestione errori ................ 3 punti
+
+===========================================
+FINE TRACCIA
+===========================================
