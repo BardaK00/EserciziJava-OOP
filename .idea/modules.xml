@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GestioneUni/GestioneUni.iml" filepath="$PROJECT_DIR$/GestioneUni/GestioneUni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Iteratore/Iteratore.iml" filepath="$PROJECT_DIR$/Iteratore/Iteratore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Point2D/Point2D.iml" filepath="$PROJECT_DIR$/Point2D/Point2D.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Punto3D/Punto3D.iml" filepath="$PROJECT_DIR$/Punto3D/Punto3D.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RangeIterator/RangeIterator.iml" filepath="$PROJECT_DIR$/RangeIterator/RangeIterator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Record/Record.iml" filepath="$PROJECT_DIR$/Record/Record.iml" />
+    </modules>
+  </component>
+</project>

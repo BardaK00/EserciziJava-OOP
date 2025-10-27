@@ -4,55 +4,12 @@ import java.awt.geom.Point2D;
  * Implementazione concreta di un punto 2D con alcune operazioni geometriche statiche.
  */
 public class Point2Dimpl extends Point2D {
+
     private double x=0.0;
     private double y=0.0;
 
-    /**
-     * Crea un punto con le coordinate specificate.
-     */
-    public Point2Dimpl(double x , double y){
-        this.x = x;
-        this.y = y;
-    }
-
-    /**
-     * Crea un punto nell'origine degli assi.
-     */
-    public Point2Dimpl(){}
-
-    /**
-     * Restituisce la coordinata X memorizzata.
-     */
-    @Override
-    public double getX() {
-        return x;
-    }
-
-    /**
-     * Restituisce la coordinata Y memorizzata.
-     */
-    @Override
-    public double getY() {
-        return y;
-    }
-
-    /**
-     * Metodo richiesto da Point2D ma non utilizzato in questa implementazione.
-     */
-    @Override
-    public void setLocation(double x, double y) {
-
-    }
-
-    /**
-     * Fornisce una rappresentazione testuale delle coordinate del punto.
-     */
-    @Override
-    public String toString() {
-        return "Point2Dimpl{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+    public record Point2DImpl(double x, double y){
+        Pount
     }
 
 
