@@ -1,0 +1,10 @@
+puntatore alla testa e alla coda della lista
+
+next e prev nella classe node
+
+node è inner e ha next,prev,info
+implementare tutti i metodi base
+la inner class nodo e listiterator
+
+sfruttare la divione tra head e tails per scegliere da dove partire calcolando size / 2
+
